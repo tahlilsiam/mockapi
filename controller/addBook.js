@@ -1,9 +1,9 @@
-const addBooks = require("../models/booksInfo");
+const BookInfo = require("../models/booksInfo");
 
-exports.Books = async (req, res) => {
+exports.addBook = async (req, res) => {
   try {
     const { title, author, genre, price } = req.body;
-    const newBook = new addBooks({ title, author, genre, price });
+    const newBook = new BookInfo({ title, author, genre, price });
 
     await newBook.save();
 

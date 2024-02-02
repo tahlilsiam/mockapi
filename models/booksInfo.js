@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const bookInfoSchema = new mongoose.Schema({
   id: {
     type: Number,
-    required: true,
     validate: {
       validator: Number.isInteger,
       message: "{VALUE} is not an integer value for id.",

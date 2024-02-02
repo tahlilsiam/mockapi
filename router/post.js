@@ -1,5 +1,7 @@
 const express = require("express");
-const addBooks = require("../controller/addBook");
+const addBook = require("../controller/addBook");
 
-const routes = express.Router();
-routes.post("/books", addBooks);
+const router = express.Router();
+router.post("/books", addBook.addBook); // Update this line
+
+module.exports = router;
